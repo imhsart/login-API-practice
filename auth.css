@@ -4,14 +4,14 @@
   box-sizing: border-box;
 }
 /* signup css */
-h1{
+.signup{
+  background-color: black;
+}
+.signup > h1{
   text-align: center;
   color:white;
   font-family: Arial, Helvetica, sans-serif;
   margin-block-start: 30px;
-}
-.signup{
-  background-color: black;
 }
 .signup-form{
   display: flex;
@@ -31,6 +31,7 @@ h1{
 }
 .signup-input{
   padding: 5px;
+  border:none;
   border-radius: 5px;
 }
 .signup-btn{
@@ -38,7 +39,48 @@ h1{
   color:white;
   background-color: black;
   border:2px solid white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* login css */
+.login{
+  background-color: #E491C9;
+}
+.login > h1{
+  text-align: center;
+  color:#F1E9E9;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-block-start: 30px;
+}
+.login-form{
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  row-gap: 15px;
+  width: 400px;
+  background-color: #982598;
+  padding: 20px;
+  margin-block-start: 30px;
   border-radius: 5px;
 }
+.login-form > label{
+  color:#F1E9E9;
+  font-weight: bold;
+}
+.login-input{
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+.login-btn{
+  padding: 10px;
+  color:white;
+  background-color: #15173D;
+  border:none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
 
-/* login css */
+/* dashboard css */

@@ -1,18 +1,18 @@
-let form = document.querySelector('.signup-form')
-let nameInput = document.querySelector('#name')
+let form = document.querySelector('.login-form')
 let emailInput = document.querySelector('#email')
 let passwordInput = document.querySelector('#password')
 
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', (e) =>{
   e.preventDefault()
+  let token = localStorage.getItem('token')
 
-  fetch('https://instagram-express-app.vercel.app/api/auth/signup', {
+  fetch('https://instagram-express-app.vercel.app/api/auth/login', {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type' : 'application/json',
+      'Authorization': token
     },
-    body: JSON.stringify({
-      "name": nameInput.value,
+    body:JSON.stringify({
       "email": emailInput.value,
       "password": passwordInput.value
     })
@@ -27,7 +27,6 @@ form.addEventListener('submit', (e) => {
   })
   .catch(error => alert(error))
 
-  nameInput.value = ''
   emailInput.value = ''
   passwordInput.value = ''
 })
