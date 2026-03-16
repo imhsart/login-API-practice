@@ -22,7 +22,7 @@ form.addEventListener('submit', (e) => {
     alert(info.message)
     if(info.success == true){
       localStorage.setItem('token', info.data.token)
-      window.location.href = 'dashboard.html'
+      window.location.href = 'pages/dashboard.html'
     }
   })
   .catch(error => alert(error))

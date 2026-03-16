@@ -37,7 +37,7 @@ logoutBtn.addEventListener('click', () => {
   .then(info => {
     if(info.success == true){
       localStorage.setItem('token', info.data.token)
-      window.location.href = 'signup.html'
+      window.location.href = 'login.html'
     }
     alert(info.message)
   })
