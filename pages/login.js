@@ -4,13 +4,11 @@ let passwordInput = document.querySelector('#password')
 
 form.addEventListener('submit', (e) =>{
   e.preventDefault()
-  let token = localStorage.getItem('token')
 
   fetch('https://instagram-express-app.vercel.app/api/auth/login', {
     method: 'POST',
     headers: {
-      'Content-Type' : 'application/json',
-      'Authorization': token
+      'Content-Type' : 'application/json'
     },
     body:JSON.stringify({
       "email": emailInput.value,
